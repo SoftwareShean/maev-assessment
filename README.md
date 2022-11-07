@@ -14,10 +14,9 @@ https://www.figma.com/file/NWsw5eZT2x3DBMHbCuH1Sw/CTA-assessment?node-id=2%3A359
 ## Prompt
 Refer to the design reference above. 
 
-Please create the four button components in the figma design:
-- Primary
-- Secondary
-- Tertiary
-- Add To Cart
+Please create the Add To Cart component in the figma design:
+
+- The button should take all necessary data as props (cta, price, etc...)
+- The button should be able to handle async state (loading, error, success)
 
 ## When you are finished, please push it to a new github repo
