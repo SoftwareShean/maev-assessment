@@ -13,6 +13,7 @@ https://www.figma.com/file/NWsw5eZT2x3DBMHbCuH1Sw/CTA-assessment?node-id=2%3A359
 
 ## Prompt
 Get an example product from this api: 'https://fakestoreapi.com/products/1'
+
 Please create the Add To Cart component in the figma design
 
 - The button should take all necessary data as props (cta, price, etc...)
