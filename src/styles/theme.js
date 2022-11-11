@@ -17,7 +17,7 @@ export const tokens = {
       bodySecondary: `"FoundersGrotesk-Regular", sans-serif`,
     },
     fontWeights: {
-      light: 300,
+      light: 400,
       regular: 500,
     },
   },
@@ -31,21 +31,24 @@ export const buttonTheme = {
     bg: tokens.colors.accent01,
     color: tokens.colors.textPrimary,
     fontFamily: tokens.typography.fonts.headingPrimary,
-    fontSize: [tokens.typography.fontSizes[2],tokens.typography.fontSizes[3]],
+    fontSize: tokens.typography.fontSizes[3],
     border: `1px solid ${tokens.colors.backgroundSecondary}`,
     borderRadius: "0px",
-    "&:not(:disabled)":{
+    cursor: "pointer",
+    width: "300px", 
+    height: "60px",
+    "&:not(:disabled)": {
       "&:hover": {
         bg: tokens.colors.accent02,
         border: `1px solid ${tokens.colors.backgroundPrimary}`,
         color: tokens.colors.textSecondary,
-      }
+      },
     },
     "&:disabled": {
-      bg: 'grey',
-      cursor: 'default',
-      color: 'initial'
-    }
+      bg: "grey",
+      cursor: "default",
+      color: "initial",
+    },
   },
   secondary: {
     bg: tokens.colors.backgroundPrimary,
@@ -54,10 +57,14 @@ export const buttonTheme = {
     borderStyle: "solid",
     color: tokens.colors.textPrimary,
     fontFamily: tokens.typography.fonts.headingPrimary,
-    fontSize: [tokens.typography.fontSizes[2],tokens.typography.fontSizes[3]],
+    fontSize: [tokens.typography.fontSizes[2], tokens.typography.fontSizes[3]],
+    borderRadius: "0px",
+    width: "300px", 
+    height: "60px",
     "&:hover": {
       bg: tokens.colors.accent02,
       border: `1px solid ${tokens.colors.textSecondary}`,
+      color: tokens.colors.textSecondary
     },
   },
   tertiary: {
@@ -66,13 +73,14 @@ export const buttonTheme = {
     bg: tokens.colors.backgroundPrimary,
     color: tokens.colors.textPrimary,
     textDecoration: "underline",
-    textUnderlineOffset: '3px',
-    "&:not(:disabled)":{
+    textUnderlineOffset: "3px",
+    cursor: "pointer",
+    "&:not(:disabled)": {
       "&:hover": {
         bg: tokens.colors.backgroundPrimary,
         border: 0,
-        color: tokens.colors.textPrimary,
-      }
+        color: tokens.colors.accent02,
+      },
     },
   },
   tabs: {
@@ -88,7 +96,7 @@ export const buttonTheme = {
     "&:hover": {
       bg: tokens.colors.backgroundPrimary,
       color: tokens.colors.textPrimary,
-      opacity: 1
+      opacity: 1,
     },
   },
 };
@@ -132,6 +140,7 @@ const textTheme = {
     fontFamily: tokens.typography.fonts.bodyPrimary,
     fontWeight: tokens.typography.fontWeights.light,
     letterSpacing: "0px",
+    fontSize: tokens.typography.fontSizes[2],
   },
   bodySecondary: {
     fontFamily: [
@@ -175,6 +184,12 @@ const inputTheme = {
   },
 };
 
+const spinnerTheme = {
+  spinner: {
+    color: "black",
+  },
+};
+
 export const theme = {
   useBodyStyles: false,
   buttons: {
@@ -193,5 +208,8 @@ export const theme = {
     input: {
       ...inputTheme,
     },
+  },
+  spinner: {
+    ...spinnerTheme,
   },
 };
